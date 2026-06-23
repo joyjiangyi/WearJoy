@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+@theme {
+  /* 字体 */
+  --font-headline: 'Noto Serif SC', 'Georgia', serif;
+  --font-body: 'Inter', 'system-ui', sans-serif;
+  --font-label: 'Inter', 'system-ui', sans-serif;
+
+  /* 颜色 - Stitch 设计系统 */
+  --color-surface-container-high: #e9e8e4;
+  --color-on-primary: #ffffff;
+  --color-on-surface-variant: #49473d;
+  --color-primary-fixed: #eae3c1;
+  --color-tertiary: #5f5c4c;
+  --color-outline-variant: #cbc6ba;
+  --color-on-secondary: #ffffff;
+  --color-surface-container-highest: #e3e2df;
+  --color-secondary: #5f5e5e;
+  --color-on-background: #1b1c1a;
+  --color-error: #ba1a1a;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-on-error-container: #93000a;
+  --color-surface-container-low: #f5f4f0;
+  --color-surface-dim: #dbdad6;
+  --color-inverse-surface: #30312e;
+  --color-on-primary-container: #fffbff;
+  --color-tertiary-fixed-dim: #cbc7b3;
+  --color-inverse-on-surface: #f2f1ed;
+  --color-surface-container: #efeeea;
+  --color-surface-tint: #827D60;
+  --color-on-secondary-fixed-variant: #474746;
+  --color-on-secondary-container: #636262;
+  --color-surface: #F7F6F2;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-surface-bright: #F7F6F2;
+  --color-primary: #827D60;
+  --color-surface-container-lowest: #ffffff;
+  --color-background: #F7F6F2;
+  --color-inverse-primary: #cec7a6;
+  --color-on-surface: #1b1c1a;
+  --color-on-primary-fixed-variant: #4b472e;
+  --color-secondary-container: #e2dfde;
+  --color-on-tertiary-fixed: #1d1c0f;
+  --color-on-tertiary-fixed-variant: #494738;
+  --color-on-primary-fixed: #1f1c07;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-on-tertiary-container: #fffbff;
+  --color-tertiary-container: #787564;
+  --color-primary-fixed-dim: #cec7a6;
+  --color-secondary-fixed: #e5e2e1;
+  --color-tertiary-fixed: #e7e3ce;
+  --color-on-tertiary: #ffffff;
+  --color-surface-variant: #e3e2df;
+  --color-primary-container: #7a7559;
+  --color-outline: #7a776c;
+
+  /* 圆角 */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.25rem;
+  --radius-full: 9999px;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.01em;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+/* 隐藏滚动条 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Glass 效果 */
+.glass-effect {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* 安全区域 */
+.safe-pb {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
